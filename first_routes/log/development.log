@@ -21,3 +21,113 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 243)
 
 
+Started GET "/" for ::1 at 2022-08-24 15:38:44 -0400
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 550)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2868)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:38:50 -0400
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2022-08-24 15:40:45 -0400
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 227)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:41:01 -0400
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 663)
+
+
+Started GET "/" for ::1 at 2022-08-24 15:41:09 -0400
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 546)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 2484)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:41:13 -0400
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:41:53 -0400
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 690)
+
+
+
+ActionController::MissingExactTemplate - UsersController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/8fd5876f8384000b/variables" for ::1 at 2022-08-24 15:41:53 -0400
+Started GET "/" for ::1 at 2022-08-24 15:42:09 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 304)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 899)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:42:12 -0400
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 0ms (ActiveRecord: 0.0ms | Allocations: 605)
+
+
+
+ActionController::MissingExactTemplate - UsersController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/4bb8c3c47af4ba38/variables" for ::1 at 2022-08-24 15:42:12 -0400
+Started GET "/" for ::1 at 2022-08-24 15:42:46 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/benschwartz/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 550)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2827)
+
+
+Started GET "/users" for ::1 at 2022-08-24 15:42:50 -0400
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 797)
+
+
+
+ActionController::MissingExactTemplate - UsersController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/0b5b59fd2241b21e/variables" for ::1 at 2022-08-24 15:42:50 -0400
+Started GET "/user" for ::1 at 2022-08-24 15:42:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2022-08-24 15:42:54 -0400
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 614)
+
+
+
+ActionController::MissingExactTemplate - UsersController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/4101a87ae044de05/variables" for ::1 at 2022-08-24 15:42:54 -0400
+Started GET "/users" for ::1 at 2022-08-24 15:43:53 -0400
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2964)
+
+
+
+NoMethodError - undefined method `redner' for #<UsersController:0x00000000004178>
+    redner plain: "I'm in the index action!"
+    ^^^^^^
+Did you mean?  render:
+  app/controllers/users_controller.rb:3:in `index'
+
+Started POST "/__better_errors/8b64a85451927bf4/variables" for ::1 at 2022-08-24 15:43:53 -0400
+Started GET "/users" for ::1 at 2022-08-24 15:44:33 -0400
+Processing by UsersController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1391)
+
+
