@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(params.require(:user).permit(:email, :name))
+    user = User.new(user_params) #works with .require(:user).permit on form data
     if user.save
       render json: user
     else
@@ -15,12 +15,24 @@ class UsersController < ApplicationController
 
   def show
     user = User.find_by("id = #{params[:id]}")
-    # debugger
-    if user
-      render json: user
-    else
-      # raise error
-      render json: user status: 422
-    end
+    render json: user
+  end
+
+  def update
+    user = User.find(params[:id])
+    user.update!(user_params)
+    render json: user
+  end
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    render json: User.all
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :name)
   end
 end
