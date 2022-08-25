@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find_by("id = #{params[:id]}")
+    user = User.find_by("id = #{params[:id]}") #potentially unsafe
     render json: user
   end
 
@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :name)
+    params.require(:user).permit(:username)
   end
 end
