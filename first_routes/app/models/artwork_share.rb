@@ -23,4 +23,5 @@ class ArtworkShare < ApplicationRecord
     foreign_key: :viewer_id
   )
 
+
 end

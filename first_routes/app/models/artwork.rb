@@ -12,6 +12,15 @@
 class Artwork < ApplicationRecord
   validates :title, uniqueness: {scope: :artist_id}
 
+  def self.artworks_for_user_id(id)
+    Artwork.joins(:shared_artworks)
+    .where("artist_id = #{id}
+      OR
+      users.id = #{id}
+      ")
+  end
+
+
   belongs_to(
     :artist,
     class_name: :User,
@@ -21,7 +30,8 @@ class Artwork < ApplicationRecord
   has_many(
     :shares,
     class_name: :ArtworkShare,
-    foreign_key: :artwork_id
+    foreign_key: :artwork_id,
+    dependent: :destroy
   )
 
   has_many :shared_artworks, through: :shares, source: :viewer

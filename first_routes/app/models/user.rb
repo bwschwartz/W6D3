@@ -19,7 +19,8 @@ class User < ApplicationRecord
   has_many(
     :artwork_shares,
     class_name: :ArtworkShare,
-    foreign_key: :viewer_id
+    foreign_key: :viewer_id,
+    dependent: :destroy
   )
 
   has_many :shared_artworks, through: :artwork_shares, source: :artwork
